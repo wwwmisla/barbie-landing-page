@@ -1,0 +1,177 @@
+/* Gerais | Styles */
+
+/* Classes */
+.main-bg {
+    background-image: url('../img/bg.jpg');
+    background-size: cover;
+    background-position: center center;
+    color: var(--white-color);
+}
+
+.white-bg {
+    background-color: var(--white-color);
+    color: var(--pink-color);
+}
+
+.main-content {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 10rem var(--gap);
+}
+
+.section {
+    min-height: 100vh;
+}
+
+.menu-spacing {
+    height: 65px;
+}
+
+body .full-width {
+    width: 100%;
+    flex: 1 1 100%;
+}
+
+/* Elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-size: var(--font-normal);
+    font-family: var(--font-family);
+    color: var(--white-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Menu */
+.menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1;
+    border-bottom: 1px solid var(--blue-color);
+}
+
+.menu-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 3rem;
+}
+
+.menu h1 {
+    font-size: var(--font-xlarge);
+    color: var(--pink-color);
+}
+
+.menu h1 a {
+    color: inherit;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.menu ul li a{
+    display: block;
+    padding: 2rem;
+    font-size: var(--font-normal);
+    color: var(--pink-color);
+    position: relative;
+}
+
+.menu ul li a::after {
+    content: '';
+    position: absolute;
+    bottom: 1rem;
+    left: 50%;
+    width: 0;
+    height: 0.2rem;
+    background-color: var(--blue-color);
+    transition: all 300ms ease-in-out;
+}
+
+.menu ul li a:hover::after {
+    width: 50%;
+    left: 25%;
+}
+
+/* Variables */
+:root {
+    --primary-color: #0a1128;
+    --white-color: #ffffff;
+    --dark-gray-color: #2e3038;
+    --pink-color: #F31EA8;
+    --pink-two-color: #e83e8c;
+    --blue-color: #0EB4FF;
+
+    --container-width: 120rem;
+    --container-width-small: 80rem;
+    --container-images: 36rem;
+
+    --spacings-xsmall: 1rem;
+    --spacings-small: 2rem;
+    --spacings-medium: 3rem;
+    --spacings-large: 5rem;
+    --spacings-xlarge: 8rem;
+    --spacings-xxlarge: 11rem;
+
+    --font-bold: 700;
+    --font-xxlarge: 10rem;
+    --font-xlarge: 8rem;
+    --font-large: 6rem;
+    --font-medium: 4rem;
+    --font-normal: 2.3rem;
+    --font-small: 1.8rem;
+    --font-xsmall: 1.6rem;
+    --font-xxsmall: 1.4rem;
+    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+}
+
+/* 
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+*/
