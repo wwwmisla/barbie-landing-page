@@ -15,12 +15,12 @@
     background: var(--pink-color);
 }
 
-
 /* Classes | Sections */
 .main-bg {
     background-image: url('../img/bg.jpg');
     background-size: cover;
     background-position: 100%;
+    margin-top: 6.5rem;
     color: var(--white-color);
 }
 
@@ -34,6 +34,10 @@
     color: var(--pink-color);
 }
 
+.dark-bg {
+    background-color: rgb(22, 21, 21);
+}
+
 .main-content {
     max-width: 120rem;
     margin: 0 auto;
@@ -44,17 +48,7 @@
     min-height: 100vh;
 }
 
-.menu-spacing {
-    height: 65px;
-}
-
-body .full-width {
-    width: 100%;
-    flex: 1 1 100%;
-}
-
 /* Home */
-
 .home-content {
     position: relative;
     display: grid;
@@ -67,11 +61,12 @@ body .full-width {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
-    align-items:center;
+    align-items: center;
 }
 
 .home-img img {
     max-width: 30%;
+    height: auto;
 }
 
 .movie-date-img {
@@ -129,21 +124,19 @@ video {
 }
 
 /* Synopsis */
-.synopsis {
+.synopsis-content {
     display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
+    flex-flow: column wrap;
     justify-content: center;
     min-height: 100vh;
     text-align: center;
-    background-color: rgb(22, 21, 21);
 }
 
-.synopsis-text-content > img {
+.synopsis-text-content>img {
     margin-bottom: var(--spacings-xlarge);
 }
 
-.synopsis-text-content > p {
+.synopsis-text-content>p {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     letter-spacing: 0.2rem;
@@ -168,7 +161,7 @@ video {
     gap: var(--spacings-medium);
 }
 
-.gallery-img img {
+.gallery-img {
     width: 100%;
     max-width: 36rem;
     max-height: 36rem;
@@ -176,6 +169,7 @@ video {
 }
 
 .gallery-img img {
+    width: 100%;
     transition: all 300ms ease-in-out;
 }
 
@@ -186,7 +180,7 @@ video {
 /* Footer */
 .footer {
     font-size: 1.6rem;
-    background-color:  var(--white-color);
+    background-color: var(--white-color);
 }
 
 .footer a {
@@ -243,7 +237,7 @@ body {
     font-size: var(--font-normal);
     font-family: var(--font-family-monospace);
     color: var(--white-color);
-    line-height: 1.2;
+    line-height: 1.5;
 }
 
 h2 {
@@ -267,20 +261,19 @@ p {
     right: 0;
     width: 100%;
     z-index: 1;
-    /* border-bottom: 1px solid var(--blue-color); */
+    border-bottom: 1px solid var(--blue-color);
 }
 
 .menu-content {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: var(--container-width);
-    margin: 0 auto;
-    padding: 0 3rem;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .menu h1 {
-    font-size: var(--font-xlarge);
+    font-size: var(--font-normal);
     color: var(--pink-color);
 }
 
@@ -293,10 +286,10 @@ p {
     display: flex;
 }
 
-.menu ul li a{
+.menu ul li a {
     display: block;
     padding: 2rem;
-    font-size: var(--font-normal);
+    font-size: var(--font-small);
     color: var(--pink-color);
     position: relative;
 }
@@ -352,37 +345,126 @@ p {
     --font-small: 1.8rem;
     --font-xsmall: 1.6rem;
     --font-xxsmall: 1.4rem;
-    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
 }
 
-/* 
-    --blue: #007bff;
-    --indigo: #6610f2;
-    --purple: #6f42c1;
-    --pink: #e83e8c;
-    --red: #dc3545;
-    --orange: #fd7e14;
-    --yellow: #ffc107;
-    --green: #28a745;
-    --teal: #20c997;
-    --cyan: #17a2b8;
-    --white: #fff;
-    --gray: #6c757d;
-    --gray-dark: #343a40;
-    --primary: #007bff;
-    --secondary: #6c757d;
-    --success: #28a745;
-    --info: #17a2b8;
-    --warning: #ffc107;
-    --danger: #dc3545;
-    --light: #f8f9fa;
-    --dark: #343a40;
-    --breakpoint-xs: 0;
-    --breakpoint-sm: 576px;
-    --breakpoint-md: 768px;
-    --breakpoint-lg: 992px;
-    --breakpoint-xl: 1200px;
-    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
-*/
+/* Close menu */
+.close-menu {
+    display: none;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+
+    /* Menu mobile */
+    .menu {
+        bottom: 0;
+        text-align: center;
+    }
+
+    .menu-content,
+    .menu-content ul {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .menu-content {
+        height: 100vh;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .menu h1 {
+        font-size: var(--font-medium);
+    }
+
+    .menu ul li a {
+        font-size: var(--font-normal);
+    }
+
+    .close-menu-label::after {
+        content: '☰';
+        position: fixed;
+        z-index: 2;
+        top: 2rem;
+        right: 2rem;
+        background-color: var(--pink-color);
+        color: var(--white-color);
+        font-size: 3rem;
+        line-height: 3rem;
+        width: 3rem;
+        height: 3rem;
+        text-align: center;
+        padding: 0.5rem;
+        cursor: pointer;
+    }
+
+    .close-menu:checked~.menu {
+        display: block;
+    }
+
+    .close-menu:checked~.close-menu-label::after {
+        content: '×';
+    }
+
+    /* Home */
+    .main-bg {
+        background-image: url('../img/bg_portrait.jpg');
+        margin-top: 0;
+    }
+
+    .synopsis-text-content>img {
+        width: 80%;
+    }
+
+    .synopsis-text-content>p, p {
+        font-size: var(--font-normal);
+    }
+
+    .home-content {
+        display: none;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1024px) {
+    /* Gallery */
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .gallery-img {
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .gallery-img img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 799px) {
+    /* Gallery */
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-img {
+        width: 100%;
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .gallery-img img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+    .main-bg {
+        background-position: center center;
+    }
+}
