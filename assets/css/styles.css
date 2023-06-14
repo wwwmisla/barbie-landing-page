@@ -261,7 +261,6 @@ p {
     right: 0;
     width: 100%;
     z-index: 1;
-    border-bottom: 1px solid var(--blue-color);
 }
 
 .menu-content {
@@ -413,6 +412,7 @@ p {
     /* Home */
     .main-bg {
         background-image: url('../img/bg_portrait.jpg');
+        background-position: center center;
         margin-top: 0;
     }
 
@@ -421,7 +421,7 @@ p {
     }
 
     .synopsis-text-content>p, p {
-        font-size: var(--font-normal);
+        font-size: var(--font-small);
     }
 
     .home-content {
@@ -460,11 +460,5 @@ p {
 
     .gallery-img img {
         width: 100%;
-    }
-}
-
-@media (max-width: 600px) {
-    .main-bg {
-        background-position: center center;
     }
 }
